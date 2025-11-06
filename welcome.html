@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome – Early Earthquake Detection</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, #f7f9fb 60%, #e1ecf7 100%);
+    color: #2a2e38;
+    margin: 0;
+  }
+  header {
+    background: #173d5c;
+    color: #fff;
+    padding: 2rem 0 1.1rem 0;
+    box-shadow: 0 4px 20px rgba(34, 41, 107, 0.08);
+  }
+  header h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 0.2em;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+  }
+  nav {
+    margin-top: 0.6rem;
+  }
+  nav a {
+    display: inline-block;
+    color: #e7eaf3;
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.28rem 0.9rem;
+    border-radius: 30px;
+    transition: background 0.15s, color 0.15s;
+  }
+  nav a:hover,
+  nav a.active {
+    background: #fdc86f;
+    color: #1a202e;
+    text-decoration: none;
+  }
+  main {
+    max-width: 760px;
+    margin: 2.8rem auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(15, 51, 81, 0.08);
+    padding: 2.4rem 2.2rem 2rem 2.2rem;
+  }
+  h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #224066;
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+  h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #fd9700;
+    letter-spacing: 0;
+    margin: 2em 0 0.5em 0;
+    font-size: 1.13rem;
+    text-transform: uppercase;
+  }
+  ul {
+    padding-left: 1.4em;
+    margin-bottom: 0.7em;
+  }
+  li {
+    margin-bottom: 0.33em;
+  }
+  a {
+    color: #1266b7;
+    transition: color 0.13s;
+  }
+  a:hover {
+    color: #fd9700;
+  }
+  .highlight-contact {
+    background: #f4fafe;
+    border-left: 5px solid #80bbf2;
+    border-radius: 7px;
+    padding: 0.8rem 1.2rem;
+    margin: 1.5em 0 1.4em 0;
+    font-size: 1.05rem;
+  }
+  footer {
+    text-align: center;
+    padding: 1.55rem 1rem 1.1rem 1rem;
+    color: #8091a7;
+    font-size: 0.98rem;
+    background: none;
+  }
+  @media (max-width: 600px) {
+    main {
+      padding: 1.2rem 0.5rem 1rem 0.5rem;
+      border-radius: 8px;
+    }
+    header h1 {
+      font-size: 1.08rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Welcome</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="welcome.html" class="active">Welcome</a>
+    <a href="article_summaries.html">Article Summaries</a>
+    <a href="progress_reports.html">Progress Reports</a>
+    <a href="experimental_design.html">Experimental Design</a>
+  </nav>
+</header>
+<main>
+  <h2>Welcome to Our Research Website</h2>
+  <div class="highlight-contact">
+    Thank you for visiting our project site! This platform summarizes our ongoing research on earthquake early detection using machine learning and affordable hardware.
+  </div>
+  <h3>Our Mission</h3>
+  <p>Many developing countries lack the infrastructure for expensive seismic monitoring networks. We aim to bridge that gap with machine learning–based solutions that run on inexpensive sensors, enabling communities to receive alerts seconds before strong shaking begins.</p>
+  <h3>Our Team</h3>
+  <ul>
+    <li>Lead Researcher – [Your Name]</li>
+    <li>Data Scientist – [Teammate 1]</li>
+    <li>Hardware Engineer – [Teammate 2]</li>
+    <li>Advisor – [Professor/Supervisor Name]</li>
+  </ul>
+  <h3>Contact</h3>
+  <div class="highlight-contact">
+    Email us at <a href="mailto:yourname@example.com">yourname@example.com</a>
+  </div>
+  <p><a href="index.html">← Back to Home</a></p>
+</main>
+<footer>
+  © <span id="yr"></span> Early Earthquake Detection Research Team
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
