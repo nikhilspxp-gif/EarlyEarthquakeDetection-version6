@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Early Earthquake Detection – Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, #f7f9fb 60%, #e1ecf7 100%);
+    color: #2a2e38;
+    margin: 0;
+  }
+  header {
+    background: #173d5c;
+    color: #fff;
+    padding: 2.2rem 0 1.1rem 0;
+    box-shadow: 0 4px 20px rgba(34,41,107,0.08);
+  }
+  header h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 0.2em;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-top: 0;
+    font-weight: 300;
+  }
+  nav {
+    margin-top: 0.6rem;
+  }
+  nav a {
+    display: inline-block;
+    color: #e7eaf3;
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.28rem 0.9rem;
+    border-radius: 30px;
+    transition: background 0.15s, color 0.15s;
+  }
+  nav a:hover, nav a.active {
+    background: #fdc86f;
+    color: #1a202e;
+    text-decoration: none;
+  }
+  main {
+    max-width: 760px;
+    margin: 2.8rem auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(15,51,81,0.08);
+    padding: 2.4rem 2.2rem 2rem 2.2rem;
+  }
+  h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-top: 0;
+    color: #224066;
+    font-size: 1.7rem;
+    letter-spacing: 0;
+  }
+  h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #fd9700;
+    letter-spacing: 0;
+    margin: 2em 0 0.5em 0;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+  }
+  ul {
+    padding-left: 1.5em;
+    margin-bottom: 0.6em;
+  }
+  li {
+    margin-bottom: 0.3em;
+  }
+  a {
+    color: #1266b7;
+    transition: color 0.15s;
+  }
+  a:hover {
+    color: #fd9700;
+  }
+  .highlight {
+    background: linear-gradient(90deg, #e8f3ff 75%, #fff7e2 100%);
+    border-left: 6px solid #fd9700;
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 16px rgba(253,199,111,0.08);
+    font-size: 1.08rem;
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem 1.2rem 1rem;
+    color: #8091a7;
+    font-size: 0.98rem;
+    background: none;
+  }
+  @media (max-width: 600px) {
+    main {
+      padding: 1.1rem 0.5rem 1rem 0.5rem;
+      border-radius: 8px;
+    }
+    header h1 {
+      font-size: 1.35rem;
+    }
+    h2 {
+      font-size: 1.07rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Early Earthquake Detection System</h1>
+  <p>Using Machine Learning for Safer Communities in Developing Nations</p>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="welcome.html">Welcome</a>
+    <a href="article_summaries.html">Article Summaries</a>
+    <a href="progress_reports.html">Progress Reports</a>
+    <a href="experimental_design.html">Experimental Design</a>
+  </nav>
+</header>
+<main>
+  <div class="highlight">
+    <strong>Our research focuses on developing a low-cost, machine learning–based early earthquake detection system aimed at third-world countries.</strong>
+    <br />
+    The goal is to create an accessible and reliable method to warn communities before severe shaking begins, reducing injuries and damage.
+  </div>
+  <h3>Key Objectives</h3>
+  <ul>
+    <li>Integrate low-cost sensors with an edge ML model to detect seismic activity.</li>
+    <li>Utilize cloud-based data sharing for regional alert systems.</li>
+    <li>Develop a scalable and open-source framework for future research.</li>
+  </ul>
+  <h3>Learn More</h3>
+  <p>Visit our <a href="welcome.html">Welcome page</a> to see project details and team information.</p>
+</main>
+<footer>
+  © <span id="yr"></span> Early Earthquake Detection Research Team
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
