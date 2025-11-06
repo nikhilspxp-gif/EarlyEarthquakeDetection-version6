@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Progress Reports – Early Earthquake Detection</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, #f7f9fb 60%, #e1ecf7 100%);
+    color: #2a2e38;
+    margin: 0;
+  }
+  header {
+    background: #173d5c;
+    color: #fff;
+    padding: 2rem 0 1.1rem 0;
+    box-shadow: 0 4px 20px rgba(34, 41, 107, 0.08);
+  }
+  header h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 0.2em;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+  }
+  nav {
+    margin-top: 0.6rem;
+  }
+  nav a {
+    display: inline-block;
+    color: #e7eaf3;
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.28rem 0.9rem;
+    border-radius: 30px;
+    transition: background 0.15s, color 0.15s;
+  }
+  nav a:hover,
+  nav a.active {
+    background: #fdc86f;
+    color: #1a202e;
+    text-decoration: none;
+  }
+  main {
+    max-width: 760px;
+    margin: 2.8rem auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(15, 51, 81, 0.08);
+    padding: 2.4rem 2.2rem 2rem 2.2rem;
+  }
+  h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #224066;
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+  .accordion {
+    margin: 2em 0;
+  }
+  .accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(34, 41, 107, 0.1);
+    overflow: hidden;
+    background: #f3f7fa;
+  }
+  .accordion-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #e0edf7;
+    color: #173d5c;
+    cursor: pointer;
+    padding: 1.1rem 1.4rem;
+    font-size: 1.13rem;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: background 0.16s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .accordion-title:hover {
+    background: #fdc86f;
+    color: #1a202e;
+  }
+  .accordion-content {
+    padding: 1.2rem 1.4rem;
+    display: none;
+    color: #222;
+    font-size: 1.05rem;
+    background: #fcfcff;
+    line-height: 1.6;
+    border-top: 1px solid #e7e7ea;
+  }
+  .active .accordion-content {
+    display: block;
+  }
+  .chevron {
+    transition: transform 0.25s;
+    font-size: 1.25em;
+  }
+  .active .chevron {
+    transform: rotate(90deg);
+  }
+  footer {
+    text-align: center;
+    padding: 1.55rem 1rem 1.1rem 1rem;
+    color: #8091a7;
+    font-size: 0.98rem;
+    background: none;
+  }
+  @media (max-width: 600px) {
+    main {
+      padding: 1.2rem 0.5rem 1rem 0.5rem;
+      border-radius: 8px;
+    }
+    header h1 {
+      font-size: 1.08rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+    .accordion-title {
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+    }
+    .accordion-content {
+      padding: 0.8rem 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Progress Reports</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="welcome.html">Welcome</a>
+    <a href="article_summaries.html">Article Summaries</a>
+    <a href="progress_reports.html" class="active">Progress Reports</a>
+    <a href="experimental_design.html">Experimental Design</a>
+  </nav>
+</header>
+<main>
+  <h2>Recent Progress Updates on Our Research</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 1 <span class="chevron">&#9654;</span></button>
+      <div class="accordion-content">[insert progress report 1 here]</div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 2 <span class="chevron">&#9654;</span></button>
+      <div class="accordion-content">[insert progress report 2 here]</div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 3 <span class="chevron">&#9654;</span></button>
+      <div class="accordion-content">[insert progress report 3 here]</div>
+    </div>
+  </div>
+</main>
+<footer>
+  © <span id="yr"></span> Early Earthquake Detection Research Team
+</footer>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function toggleAccordion(element) {
+    const item = element.parentElement;
+    item.classList.toggle('active');
+    document.querySelectorAll('.accordion-item').forEach(function(other) {
+      if (other !== item) other.classList.remove('active');
+    });
+  }
+</script>
+</body>
+</html>
