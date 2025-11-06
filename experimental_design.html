@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Experimental Design – Early Earthquake Detection</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, #f7f9fb 60%, #e1ecf7 100%);
+    color: #2a2e38;
+    margin: 0;
+    line-height: 1.6;
+  }
+  header {
+    background: #173d5c;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  header h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 0.2em;
+    font-size: 2.2rem;
+  }
+  nav {
+    margin-top: 0.6rem;
+  }
+  nav a {
+    display: inline-block;
+    color: #e7eaf3;
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.28rem 0.9rem;
+    border-radius: 30px;
+  }
+  nav a:hover, nav a.active {
+    background: #fdc86f;
+    color: #1a202e;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    line-height: 1.6;
+  }
+  h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #224066;
+  }
+  h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.4rem;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    color: #fd9700;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #8091a7;
+    font-size: 0.98rem;
+    margin-top: 3em;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Experimental Design</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="welcome.html">Welcome</a>
+    <a href="article_summaries.html">Article Summaries</a>
+    <a href="progress_reports.html">Progress Reports</a>
+    <a href="experimental_design.html" class="active">Experimental Design</a>
+  </nav>
+</header>
+<main>
+  <h2>Introduction</h2>
+  <p>This section introduces the experimental design for creating an early-earthquake detection system using machine learning. The design involves hardware components such as piezoelectric transducers and microcontrollers, as well as software algorithms for data analysis.</p>
+  <h3>Materials and Methods</h3>
+  <p>The system uses Zirconate Titanate (PZT) piezoelectric discs to convert mechanical strain into electrical signals. These signals are conditioned and amplified, then processed by an ESP32 microcontroller attached to a sensor node. Power management relies on rechargeable Li-ion batteries and wake-on-radio communication to minimize energy consumption.</p>
+  <h3>Experimental Setup</h3>
+  <p>The system is tested on a controlled vibration setup using a shake table, which simulates earthquake vibrations within the frequency range of 0.5-20Hz. Data from sensors is transmitted wirelessly via LoRa modules to a Raspberry Pi, where machine learning algorithms analyze the signals.</p>
+  <h3>Data Collection & Analysis</h3>
+  <p>Data includes voltage readings, vibration metrics, and system latency. These are processed to evaluate detection accuracy, false positives, energy efficiency, and response times. Charts and tables will be generated to compare the system’s performance against traditional detection methods.</p>
+  <h3>Expected Outcomes</h3>
+  <p>The goal is an affordable, energy-efficient early warning system that can be deployed in resource-limited regions with minimal maintenance requirements.</p>
+</main>
+<footer>
+  <p>&copy; 2025 Early Earthquake Detection Research Team</p>
+</footer>
+</body>
+</html>
