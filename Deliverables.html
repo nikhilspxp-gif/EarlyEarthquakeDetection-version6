@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Progress Reports – Early Earthquake Detection</title>
+<title>Article Summaries – Early Earthquake Detection</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 <style>
   body {
@@ -17,13 +17,13 @@
     color: #fff;
     padding: 2rem 0 1.1rem 0;
     box-shadow: 0 4px 20px rgba(34, 41, 107, 0.08);
-    text-align: center;
   }
   header h1 {
     font-family: 'Montserrat', Arial, sans-serif;
     margin-bottom: 0.2em;
     letter-spacing: 1px;
     font-size: 2.2rem;
+    text-align: center;
   }
   nav {
     margin-top: 0.6rem;
@@ -138,47 +138,27 @@
 </head>
 <body>
 <header>
-  <h1>Progress Reports</h1>
+  <h1>Deliverables</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="welcome.html">Welcome</a>
-    <a href="article_summaries.html">Article Summaries</a>
-    <a href="progress_reports.html" class="active">Progress Reports</a>
+    <a href="article_summaries.html" >Article Summaries</a>
+    <a href="progress_reports.html">Progress Reports</a>
     <a href="experimental_design.html">Experimental Design</a>
-    <a href="Media.html">Media</a>
-    <a href="Deliverables.html">Deliverables</a>
+    <a href="Media.html" >Media </a>
+    <a href="Deliverables.html"class="active">Deliverables</a>
     <a href="aboutus.html">About Us</a>
   </nav>
 </header>
-<main>
-  <h2>Recent Progress Updates on Our Research</h2>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 1 <span class="chevron">&#9654;</span></button>
-      <div class="accordion-content">[insert progress report 1 here]</div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 2 <span class="chevron">&#9654;</span></button>
-      <div class="accordion-content">[insert progress report 2 here]</div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 3 <span class="chevron">&#9654;</span></button>
-      <div class="accordion-content">[insert progress report 3 here]</div>
-    </div>
-  </div>
-</main>
-<footer>
-  © <span id="yr"></span> Early Earthquake Detection Research Team
-</footer>
 <script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  function toggleAccordion(element) {
-    const item = element.parentElement;
-    item.classList.toggle('active');
-    document.querySelectorAll('.accordion-item').forEach(function(other) {
-      if (other !== item) other.classList.remove('active');
-    });
-  }
-</script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    function toggleAccordion(element) {
+      const item = element.parentElement;
+      item.classList.toggle('active');
+      document.querySelectorAll('.accordion-item').forEach(function(other) {
+        if (other !== item) other.classList.remove('active');
+      });
+    }
+  </script>
 </body>
 </html>

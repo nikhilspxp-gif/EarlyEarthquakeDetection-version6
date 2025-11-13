@@ -17,6 +17,7 @@
     color: #fff;
     padding: 2rem 0 1.1rem 0;
     box-shadow: 0 4px 20px rgba(34, 41, 107, 0.08);
+    text-align: center;
   }
   header h1 {
     font-family: 'Montserrat', Arial, sans-serif;
@@ -133,6 +134,10 @@
       padding: 0.8rem 1rem;
     }
   }
+  .pdfstyle {
+    width: 100%;
+    height: 850px;
+  }
 </style>
 </head>
 <body>
@@ -144,6 +149,9 @@
     <a href="article_summaries.html" class="active">Article Summaries</a>
     <a href="progress_reports.html">Progress Reports</a>
     <a href="experimental_design.html">Experimental Design</a>
+    <a href="Media.html">Media</a>
+    <a href="Deliverables.html">Deliverables</a>
+    <a href="aboutus.html">About Us</a>
   </nav>
 </header>
 <main>
@@ -154,21 +162,21 @@
         Article Summary 1
         <span class="chevron">&#9654;</span>
       </button>
-      <div class="accordion-content">[insert article summary 1 here]</div>
+      <div class="accordion-content"><embed src="./Article Summary 1.pdf" class="pdfstyle" /></div>
     </div>
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Article Summary 2
         <span class="chevron">&#9654;</span>
       </button>
-      <div class="accordion-content">[insert article summary 2 here]</div>
+      <div class="accordion-content"><embed src="./Article Summary 2.pdf" class="pdfstyle" /></div>
     </div>
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Article Summary 3
         <span class="chevron">&#9654;</span>
       </button>
-      <div class="accordion-content">[insert article summary 3 here]</div>
+      <div class="accordion-content"><embed src="./Article Summary 3.pdf" class="pdfstyle" /></div>
     </div>
   </div>
 </main>
