@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Article Summaries – Early Earthquake Detection</title>
+<title>Welcome – Early Earthquake Detection</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 <style>
   body {
@@ -17,13 +17,13 @@
     color: #fff;
     padding: 2rem 0 1.1rem 0;
     box-shadow: 0 4px 20px rgba(34, 41, 107, 0.08);
+    text-align: center;
   }
   header h1 {
     font-family: 'Montserrat', Arial, sans-serif;
     margin-bottom: 0.2em;
     letter-spacing: 1px;
     font-size: 2.2rem;
-    text-align: center;
   }
   nav {
     margin-top: 0.6rem;
@@ -59,54 +59,35 @@
     font-size: 1.4rem;
     margin-top: 0;
   }
-  .accordion {
-    margin: 2em 0;
-  }
-  .accordion-item {
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(34, 41, 107, 0.1);
-    overflow: hidden;
-    background: #f3f7fa;
-  }
-  .accordion-title {
+  h3 {
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #e0edf7;
-    color: #173d5c;
-    cursor: pointer;
-    padding: 1.1rem 1.4rem;
+    color: #fd9700;
+    letter-spacing: 0;
+    margin: 2em 0 0.5em 0;
     font-size: 1.13rem;
-    border: none;
-    outline: none;
-    text-align: left;
-    transition: background 0.16s;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-transform: uppercase;
   }
-  .accordion-title:hover {
-    background: #fdc86f;
-    color: #1a202e;
+  ul {
+    padding-left: 1.4em;
+    margin-bottom: 0.7em;
   }
-  .accordion-content {
-    padding: 1.2rem 1.4rem;
-    display: none;
-    color: #222;
+  li {
+    margin-bottom: 0.33em;
+  }
+  a {
+    color: #1266b7;
+    transition: color 0.13s;
+  }
+  a:hover {
+    color: #fd9700;
+  }
+  .highlight-contact {
+    background: #f4fafe;
+    border-left: 5px solid #80bbf2;
+    border-radius: 7px;
+    padding: 0.8rem 1.2rem;
+    margin: 1.5em 0 1.4em 0;
     font-size: 1.05rem;
-    background: #fcfcff;
-    line-height: 1.6;
-    border-top: 1px solid #e7e7ea;
-  }
-  .active .accordion-content {
-    display: block;
-  }
-  .chevron {
-    transition: transform 0.25s;
-    font-size: 1.25em;
-  }
-  .active .chevron {
-    transform: rotate(90deg);
   }
   footer {
     text-align: center;
@@ -126,13 +107,6 @@
     h2 {
       font-size: 1rem;
     }
-    .accordion-title {
-      font-size: 1rem;
-      padding: 0.8rem 1rem;
-    }
-    .accordion-content {
-      padding: 0.8rem 1rem;
-    }
   }
 </style>
 </head>
@@ -141,24 +115,22 @@
   <h1>Media</h1>
   <nav>
     <a href="index.html">Home</a>
-    <a href="welcome.html">Welcome</a>
-    <a href="article_summaries.html" >Article Summaries</a>
+    <a href="welcome.html" >Welcome</a>
+    <a href="article_summaries.html">Article Summaries</a>
     <a href="progress_reports.html">Progress Reports</a>
     <a href="experimental_design.html">Experimental Design</a>
-    <a href="Media.html" class="active">Media </a>
+    <a href="Media.html" class="active">Media</a>
     <a href="Deliverables.html">Deliverables</a>
     <a href="aboutus.html">About Us</a>
   </nav>
 </header>
-<script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    function toggleAccordion(element) {
-      const item = element.parentElement;
-      item.classList.toggle('active');
-      document.querySelectorAll('.accordion-item').forEach(function(other) {
-        if (other !== item) other.classList.remove('active');
-      });
-    }
-  </script>
+<main>
+  
+  <p><a href="index.html">← Back to Home</a></p>
+</main>
+<footer>
+  © <span id="yr"></span> Early Earthquake Detection Research Team
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
