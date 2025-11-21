@@ -108,6 +108,18 @@
   .active .chevron {
     transform: rotate(90deg);
   }
+  /* PDF container styling */
+  .pdf-container {
+    margin-top: 0.8rem;
+    border: 1px solid #d0d6e0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .pdf-frame {
+    width: 100%;
+    height: 600px; /* adjust height if you want */
+    border: none;
+  }
   footer {
     text-align: center;
     padding: 1.55rem 1rem 1.1rem 1rem;
@@ -133,6 +145,9 @@
     .accordion-content {
       padding: 0.8rem 1rem;
     }
+    .pdf-frame {
+      height: 450px;
+    }
   }
 </style>
 </head>
@@ -150,34 +165,66 @@
     <a href="aboutus.html">About Us</a>
   </nav>
 </header>
+
 <main>
   <h2>Recent Progress Updates on Our Research</h2>
   <div class="accordion">
+    <!-- Progress Report 1 with embedded PDF -->
     <div class="accordion-item">
-      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 1 <span class="chevron">&#9654;</span></button>
-      <div class="accordion-content">[insert progress report 1 here]</div>
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Progress Report 1
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        <p>You can view the full Progress Report 1 PDF below.</p>
+        <div class="pdf-container">
+          <!-- Replace ProgressReport1.pdf with your real filename -->
+          <iframe class="pdf-frame" src="Progress Report 1.pdf"></iframe>
+        </div>
+        <p style="margin-top:0.8rem;">
+          If the PDF does not load, you can
+          <a href="Progress Report 1.pdf" target="_blank" rel="noopener noreferrer">
+            open it in a new tab
+          </a>.
+        </p>
+      </div>
     </div>
+
     <div class="accordion-item">
-      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 2 <span class="chevron">&#9654;</span></button>
-      <div class="accordion-content">[insert progress report 2 here]</div>
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Progress Report 2
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        [insert progress report 2 here]
+      </div>
     </div>
+
     <div class="accordion-item">
-      <button class="accordion-title" onclick="toggleAccordion(this)">Progress Report 3 <span class="chevron">&#9654;</span></button>
-      <div class="accordion-content">[insert progress report 3 here]</div>
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Progress Report 3
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        [insert progress report 3 here]
+      </div>
     </div>
   </div>
+
   <p><a href="index.html">← Back to Home</a></p>
 </main>
 
 <footer>
   © <span id="yr"></span> Early Earthquake Detection Research Team
 </footer>
+
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
   function toggleAccordion(element) {
     const item = element.parentElement;
     item.classList.toggle('active');
-    document.querySelectorAll('.accordion-item').forEach(function(other) {
+    document.querySelectorAll('.accordion-item').forEach(function (other) {
       if (other !== item) other.classList.remove('active');
     });
   }
