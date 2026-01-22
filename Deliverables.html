@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Article Summaries – Early Earthquake Detection</title>
+<title>Deliverables – Early Earthquake Detection</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 <style>
   body {
@@ -27,6 +27,7 @@
   }
   nav {
     margin-top: 0.6rem;
+    text-align: center;
   }
   nav a {
     display: inline-block;
@@ -108,6 +109,17 @@
   .active .chevron {
     transform: rotate(90deg);
   }
+  .pdf-container {
+    margin-top: 0.8rem;
+    border: 1px solid #d0d6e0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .pdf-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+  }
   footer {
     text-align: center;
     padding: 1.55rem 1rem 1.1rem 1rem;
@@ -133,6 +145,9 @@
     .accordion-content {
       padding: 0.8rem 1rem;
     }
+    .pdf-frame {
+      height: 450px;
+    }
   }
 </style>
 </head>
@@ -142,24 +157,58 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="welcome.html">Welcome</a>
-    <a href="article_summaries.html" >Article Summaries</a>
+    <a href="article_summaries.html">Article Summaries</a>
     <a href="progress_reports.html">Progress Reports</a>
     <a href="experimental_design.html">Experimental Design</a>
-    <a href="Media.html" >Media </a>
-    <a href="Deliverables.html"class="active">Deliverables</a>
+    <a href="Media.html">Media</a>
+    <a href="Deliverables.html" class="active">Deliverables</a>
     <a href="aboutus.html">About Us</a>
   </nav>
 </header>
-<p><a href="index.html">← Back to Home</a></p>
+
+<main>
+  <h2>Project Deliverables</h2>
+
+  <div class="accordion">
+    <!-- Proposal dropdown showing Proposal.pdf -->
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Proposal
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        <p>You can view the full project Proposal PDF below.</p>
+        <div class="pdf-container">
+          <!-- Make sure Proposal.pdf is in the same folder as this HTML file -->
+          <iframe class="pdf-frame" src="Proposal.pdf"></iframe>
+        </div>
+        <p style="margin-top:0.8rem;">
+          If the PDF does not load, you can
+          <a href="Proposal.pdf" target="_blank" rel="noopener noreferrer">
+            open it in a new tab
+          </a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <p><a href="index.html">← Back to Home</a></p>
+</main>
+
+<footer>
+  © <span id="yr"></span> Early Earthquake Detection Research Team
+</footer>
+
 <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    function toggleAccordion(element) {
-      const item = element.parentElement;
-      item.classList.toggle('active');
-      document.querySelectorAll('.accordion-item').forEach(function(other) {
-        if (other !== item) other.classList.remove('active');
-      });
-    }
-  </script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function toggleAccordion(element) {
+    const item = element.parentElement;
+    item.classList.toggle('active');
+    document.querySelectorAll('.accordion-item').forEach(function(other) {
+      if (other !== item) other.classList.remove('active');
+    });
+  }
+</script>
 </body>
 </html>
