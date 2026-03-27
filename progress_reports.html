@@ -167,8 +167,8 @@
 
 <main>
   <h2>Recent Progress Updates on Our Research</h2>
+
   <div class="accordion">
-    <!-- Progress Report 1 -->
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Progress Report 1
@@ -186,7 +186,6 @@
       </div>
     </div>
 
-    <!-- Progress Report 2 -->
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Progress Report 2
@@ -204,7 +203,6 @@
       </div>
     </div>
 
-    <!-- Progress Report 3 -->
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Progress Report 3
@@ -222,7 +220,6 @@
       </div>
     </div>
 
-    <!-- Progress Report 4 -->
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Progress Report 4
@@ -240,7 +237,6 @@
       </div>
     </div>
 
-    <!-- Progress Report 5 -->
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Progress Report 5
@@ -249,7 +245,6 @@
       <div class="accordion-content">
         <p>You can view the full Progress Report 5 PDF below.</p>
         <div class="pdf-container">
-          <!-- Uses the filename you specified -->
           <iframe class="pdf-frame" src="Progress Report 5.pdf"></iframe>
         </div>
         <p style="margin-top:0.8rem;">
@@ -259,6 +254,22 @@
       </div>
     </div>
 
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Progress Report 6
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        <p>You can view the full Progress Report 6 PDF below.</p>
+        <div class="pdf-container">
+          <iframe class="pdf-frame" src="Progress Report 6.pdf"></iframe>
+        </div>
+        <p style="margin-top:0.8rem;">
+          If the PDF does not load, you can
+          <a href="Progress Report 6.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
+        </p>
+      </div>
+    </div>
   </div>
 
   <p><a href="index.html">← Back to Home</a></p>
@@ -274,11 +285,10 @@
   function toggleAccordion(element) {
     const item = element.parentElement;
     item.classList.toggle('active');
-    document.querySelectorAll('.accordion-item').forEach(function (other) {
+    document.querySelectorAll('.accordion-item').forEach(function(other) {
       if (other !== item) other.classList.remove('active');
     });
   }
 </script>
 </body>
 </html>
-
