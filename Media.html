@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Welcome – Early Earthquake Detection</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+<title>Media – Early Earthquake Detection</title>
+//fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 <style>
   body {
     font-family: 'Roboto', Arial, sans-serif;
@@ -46,7 +46,7 @@
     text-decoration: none;
   }
   main {
-    max-width: 760px;
+    max-width: 980px;
     margin: 2.8rem auto;
     background: #fff;
     border-radius: 16px;
@@ -58,36 +58,71 @@
     color: #224066;
     font-size: 1.4rem;
     margin-top: 0;
+    margin-bottom: 0.5rem;
   }
-  h3 {
+  .intro {
+    color: #4d5b6d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  .card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid #dbe5f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(34, 41, 107, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(34, 41, 107, 0.12);
+  }
+  .card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    background: #eef4fb;
+  }
+  .card-content {
+    padding: 1rem 1rem 1.1rem 1rem;
+  }
+  .card-content h3 {
+    margin: 0 0 0.35rem 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    color: #fd9700;
-    letter-spacing: 0;
-    margin: 2em 0 0.5em 0;
-    font-size: 1.13rem;
-    text-transform: uppercase;
-  }
-  ul {
-    padding-left: 1.4em;
-    margin-bottom: 0.7em;
-  }
-  li {
-    margin-bottom: 0.33em;
-  }
-  a {
-    color: #1266b7;
-    transition: color 0.13s;
-  }
-  a:hover {
-    color: #fd9700;
-  }
-  .highlight-contact {
-    background: #f4fafe;
-    border-left: 5px solid #80bbf2;
-    border-radius: 7px;
-    padding: 0.8rem 1.2rem;
-    margin: 1.5em 0 1.4em 0;
+    color: #173d5c;
     font-size: 1.05rem;
+  }
+  .card-content p {
+    margin: 0;
+    color: #5a6878;
+    line-height: 1.5;
+    font-size: 0.98rem;
+  }
+  .note {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-left: 5px solid #fdc86f;
+    background: #fff9ec;
+    border-radius: 8px;
+    color: #6b5b2b;
+    line-height: 1.5;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    color: #173d5c;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .back-link:hover {
+    text-decoration: underline;
   }
   footer {
     text-align: center;
@@ -98,14 +133,22 @@
   }
   @media (max-width: 600px) {
     main {
-      padding: 1.2rem 0.5rem 1rem 0.5rem;
+      padding: 1.2rem 0.75rem 1rem 0.75rem;
       border-radius: 8px;
+      margin: 1.5rem 0.6rem;
     }
     header h1 {
       font-size: 1.08rem;
     }
     h2 {
       font-size: 1rem;
+    }
+    .card img {
+      height: 240px;
+    }
+    nav a {
+      margin: 0 6px 8px 6px;
+      font-size: 0.92rem;
     }
   }
 </style>
@@ -115,7 +158,7 @@
   <h1>Media</h1>
   <nav>
     <a href="index.html">Home</a>
-    <a href="welcome.html" >Welcome</a>
+    <a href="welcome.html">Welcome</a>
     <a href="article_summaries.html">Article Summaries</a>
     <a href="progress_reports.html">Progress Reports</a>
     <a href="experimental_design.html">Experimental Design</a>
@@ -124,14 +167,45 @@
     <a href="aboutus.html">About Us</a>
   </nav>
 </header>
-<main>
-  
-  <p><a href="index.html">← Back to Home</a></p>
 
+<main>
+  <h2>Project Images</h2>
+  <p class="intro">
+    Here are a couple of photos from our project work and prototype development.
+  </p>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="measuring_pic.jpeg" alt="Measuring setup photo" />
+      <div class="card-content">
+        <h3>Measuring Setup</h3>
+        <p>Photo of the measuring process used during our early earthquake detection work.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="prototype_pic.jpeg" alt="Prototype photo" />
+      <div class="card-content">
+        <h3>Prototype</h3>
+        <p>Our prototype hardware setup used for testing and development.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    Make sure both image files are in the same folder as this HTML page:
+    <strong>measuring_pic.jpeg</strong> and <strong>prototype_pic.jpeg</strong>.
+  </div>
+
+  <p><a class="back-link" href="index.html">← Back to Home</a></p>
 </main>
+
 <footer>
   © <span id="yr"></span> Early Earthquake Detection Research Team
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
