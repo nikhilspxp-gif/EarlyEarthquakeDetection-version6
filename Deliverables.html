@@ -3,123 +3,202 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deliverables – Early Earthquake Detection</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 <style>
   body {
     font-family: 'Roboto', Arial, sans-serif;
-    background: linear-gradient(120deg, #f7f9fb 60%, #e1ecf7 100%);
+    background: linear-gradient(120deg, #f7f9fb 0%, #e7f0fb 45%, #dce9f7 100%);
     color: #2a2e38;
     margin: 0;
   }
+
   header {
-    background: #173d5c;
+    background: linear-gradient(135deg, #173d5c 0%, #24527a 100%);
     color: #fff;
     padding: 2rem 0 1.1rem 0;
-    box-shadow: 0 4px 20px rgba(34, 41, 107, 0.08);
+    box-shadow: 0 4px 20px rgba(34, 41, 107, 0.12);
+    position: relative;
   }
+
   header h1 {
     font-family: 'Montserrat', Arial, sans-serif;
-    margin-bottom: 0.2em;
+    margin: 0 0 0.2em 0;
     letter-spacing: 1px;
-    font-size: 2.2rem;
+    font-size: 2.25rem;
     text-align: center;
   }
+
+  header p {
+    text-align: center;
+    margin: 0.25rem 0 0;
+    color: #dfe8f5;
+    font-size: 1rem;
+  }
+
   nav {
-    margin-top: 0.6rem;
+    margin-top: 0.9rem;
     text-align: center;
+    padding: 0 1rem;
   }
+
   nav a {
     display: inline-block;
     color: #e7eaf3;
-    margin: 0 14px;
+    margin: 0 10px 10px 10px;
     text-decoration: none;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    padding: 0.28rem 0.9rem;
+    letter-spacing: 0.4px;
+    padding: 0.34rem 0.9rem;
     border-radius: 30px;
-    transition: background 0.15s, color 0.15s;
+    transition: background 0.15s, color 0.15s, transform 0.15s;
   }
+
   nav a:hover,
   nav a.active {
     background: #fdc86f;
     color: #1a202e;
     text-decoration: none;
+    transform: translateY(-1px);
   }
+
   main {
-    max-width: 760px;
-    margin: 2.8rem auto;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(15, 51, 81, 0.08);
+    max-width: 920px;
+    margin: 2.6rem auto;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 18px;
+    box-shadow: 0 10px 34px rgba(15, 51, 81, 0.10);
     padding: 2.4rem 2.2rem 2rem 2.2rem;
+    border: 1px solid rgba(208, 214, 224, 0.6);
   }
+
   h2 {
     font-family: 'Montserrat', Arial, sans-serif;
     color: #224066;
-    font-size: 1.4rem;
+    font-size: 1.55rem;
     margin-top: 0;
+    margin-bottom: 0.5rem;
   }
+
+  .intro {
+    color: #4d5b6d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
   .accordion {
-    margin: 2em 0;
+    margin: 1.8rem 0 1.3rem 0;
   }
+
   .accordion-item {
     margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(34, 41, 107, 0.1);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(34, 41, 107, 0.10);
     overflow: hidden;
     background: #f3f7fa;
+    border: 1px solid rgba(208, 214, 224, 0.8);
   }
+
   .accordion-title {
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #e0edf7;
+    background: linear-gradient(135deg, #e0edf7 0%, #d5e7f4 100%);
     color: #173d5c;
     cursor: pointer;
-    padding: 1.1rem 1.4rem;
-    font-size: 1.13rem;
+    padding: 1.15rem 1.4rem;
+    font-size: 1.12rem;
     border: none;
     outline: none;
     text-align: left;
-    transition: background 0.16s;
+    transition: background 0.16s, transform 0.16s;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .accordion-title:hover {
-    background: #fdc86f;
+    background: linear-gradient(135deg, #fdc86f 0%, #f8bf57 100%);
     color: #1a202e;
   }
+
   .accordion-content {
-    padding: 1.2rem 1.4rem;
+    padding: 1.2rem 1.4rem 1.35rem 1.4rem;
     display: none;
     color: #222;
-    font-size: 1.05rem;
+    font-size: 1.03rem;
     background: #fcfcff;
-    line-height: 1.6;
+    line-height: 1.65;
     border-top: 1px solid #e7e7ea;
   }
+
   .active .accordion-content {
     display: block;
   }
+
   .chevron {
     transition: transform 0.25s;
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
+
   .active .chevron {
     transform: rotate(90deg);
   }
-  .pdf-container {
-    margin-top: 0.8rem;
-    border: 1px solid #d0d6e0;
-    border-radius: 6px;
-    overflow: hidden;
+
+  .tag {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    background: #e8f2fb;
+    color: #24527a;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    margin-left: 0.55rem;
+    vertical-align: middle;
   }
+
+  .pdf-container {
+    margin-top: 0.9rem;
+    border: 1px solid #d0d6e0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4);
+  }
+
   .pdf-frame {
     width: 100%;
-    height: 600px;
+    height: 620px;
     border: none;
+    display: block;
   }
+
+  .file-note {
+    margin-top: 0.9rem;
+    font-size: 0.96rem;
+    color: #607086;
+  }
+
+  .download-link {
+    display: inline-block;
+    margin-top: 0.3rem;
+    color: #173d5c;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .download-link:hover {
+    text-decoration: underline;
+  }
+
+  .section-label {
+    margin: 0 0 0.35rem 0;
+    color: #173d5c;
+    font-weight: 700;
+  }
+
   footer {
     text-align: center;
     padding: 1.55rem 1rem 1.1rem 1rem;
@@ -127,26 +206,44 @@
     font-size: 0.98rem;
     background: none;
   }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    color: #173d5c;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 600px) {
     main {
-      padding: 1.2rem 0.5rem 1rem 0.5rem;
-      border-radius: 8px;
+      padding: 1.2rem 0.75rem 1rem 0.75rem;
+      border-radius: 10px;
+      margin: 1.5rem 0.6rem;
     }
     header h1 {
-      font-size: 1.08rem;
+      font-size: 1.15rem;
     }
     h2 {
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
     .accordion-title {
       font-size: 1rem;
-      padding: 0.8rem 1rem;
+      padding: 0.9rem 1rem;
     }
     .accordion-content {
-      padding: 0.8rem 1rem;
+      padding: 0.8rem 1rem 1rem 1rem;
     }
     .pdf-frame {
-      height: 450px;
+      height: 460px;
+    }
+    nav a {
+      margin: 0 6px 8px 6px;
+      font-size: 0.92rem;
     }
   }
 </style>
@@ -154,6 +251,7 @@
 <body>
 <header>
   <h1>Deliverables</h1>
+  <p>All final project files in one place</p>
   <nav>
     <a href="index.html">Home</a>
     <a href="welcome.html">Welcome</a>
@@ -168,31 +266,67 @@
 
 <main>
   <h2>Project Deliverables</h2>
+  <p class="intro">
+    Click each section to open the file. Each deliverable is displayed right on this page for easy viewing and downloading.
+  </p>
 
   <div class="accordion">
-    <!-- Proposal dropdown showing Proposal.pdf -->
     <div class="accordion-item">
       <button class="accordion-title" onclick="toggleAccordion(this)">
         Proposal
         <span class="chevron">&#9654;</span>
       </button>
       <div class="accordion-content">
-        <p>You can view the full project Proposal PDF below.</p>
+        <p class="section-label">Project Proposal</p>
+        <p>This is the proposal for the Early Earthquake Detection project.</p>
         <div class="pdf-container">
-          <!-- Make sure Proposal.pdf is in the same folder as this HTML file -->
-          <iframe class="pdf-frame" src="Proposal.pdf"></iframe>
+          <iframe class="pdf-frame" src="Proposal.pdf" title="Proposal PDF"></iframe>
         </div>
-        <p style="margin-top:0.8rem;">
+        <div class="file-note">
           If the PDF does not load, you can
-          <a href="Proposal.pdf" target="_blank" rel="noopener noreferrer">
-            open it in a new tab
-          </a>.
-        </p>
+          <a class="download-link" href="Proposal.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Thesis Paper
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        <p class="section-label">Thesis Paper</p>
+        <p>This is the full thesis paper submitted as a PDF file.</p>
+        <div class="pdf-container">
+          <iframe class="pdf-frame" src="thesispaper.pdf" title="Thesis Paper PDF"></iframe>
+        </div>
+        <div class="file-note">
+          If the PDF does not load, you can
+          <a class="download-link" href="thesispaper.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Symposium Poster
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        <p class="section-label">PowerPoint Poster</p>
+        <p>This is the final symposium poster exported as a PDF.</p>
+        <div class="pdf-container">
+          <iframe class="pdf-frame" src="Symposium-poster-final.pdf" title="Symposium Poster PDF"></iframe>
+        </div>
+        <div class="file-note">
+          If the PDF does not load, you can
+          <a class="download-link" href="Symposium-poster-final.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
+        </div>
       </div>
     </div>
   </div>
 
-  <p><a href="index.html">← Back to Home</a></p>
+  <p><a class="back-link" href="index.html">← Back to Home</a></p>
 </main>
 
 <footer>
