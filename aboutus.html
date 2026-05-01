@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Article Summaries – Early Earthquake Detection</title>
+<title>About Us – Early Earthquake Detection</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 <style>
   body {
@@ -27,6 +27,7 @@
   }
   nav {
     margin-top: 0.6rem;
+    text-align: center;
   }
   nav a {
     display: inline-block;
@@ -46,7 +47,7 @@
     text-decoration: none;
   }
   main {
-    max-width: 760px;
+    max-width: 1320px;
     margin: 2.8rem auto;
     background: #fff;
     border-radius: 16px;
@@ -56,57 +57,51 @@
   h2 {
     font-family: 'Montserrat', Arial, sans-serif;
     color: #224066;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-top: 0;
+    text-align: center;
   }
-  .accordion {
-    margin: 2em 0;
-  }
-  .accordion-item {
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(34, 41, 107, 0.1);
-    overflow: hidden;
-    background: #f3f7fa;
-  }
-  .accordion-title {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background: #e0edf7;
-    color: #173d5c;
-    cursor: pointer;
-    padding: 1.1rem 1.4rem;
-    font-size: 1.13rem;
-    border: none;
-    outline: none;
-    text-align: left;
-    transition: background 0.16s;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .accordion-title:hover {
-    background: #fdc86f;
-    color: #1a202e;
-  }
-  .accordion-content {
+  .group-statement {
+    max-width: 1000px;
+    margin: 0 auto 2.2rem auto;
     padding: 1.2rem 1.4rem;
-    display: none;
-    color: #222;
-    font-size: 1.05rem;
-    background: #fcfcff;
-    line-height: 1.6;
-    border-top: 1px solid #e7e7ea;
+    background: #f4fafe;
+    border-left: 5px solid #80bbf2;
+    border-radius: 10px;
+    color: #1f2d3d;
+    line-height: 1.7;
+    font-size: 1.07rem;
+    box-shadow: 0 4px 16px rgba(34,41,107,0.08);
   }
-  .active .accordion-content {
-    display: block;
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
   }
-  .chevron {
-    transition: transform 0.25s;
-    font-size: 1.25em;
+  .card {
+    background: #f4fafe;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(34,41,107,0.14);
+    width: 380px;
+    min-height: 470px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 320px;
+    max-width: 500px;
   }
-  .active .chevron {
-    transform: rotate(90deg);
+  .card img {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px #d6d9df;
+    margin-bottom: 1.5rem;
   }
   footer {
     text-align: center;
@@ -115,23 +110,46 @@
     font-size: 0.98rem;
     background: none;
   }
+  .back-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #1266b7;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .back-link:hover {
+    color: #fd9700;
+    text-decoration: underline;
+  }
   @media (max-width: 600px) {
     main {
-      padding: 1.2rem 0.5rem 1rem 0.5rem;
+      padding: 1.2rem 0.8rem 1rem 0.8rem;
       border-radius: 8px;
+      margin: 1.5rem 0.6rem;
     }
     header h1 {
       font-size: 1.08rem;
     }
     h2 {
-      font-size: 1rem;
+      font-size: 1.15rem;
     }
-    .accordion-title {
+    .group-statement {
       font-size: 1rem;
-      padding: 0.8rem 1rem;
+      padding: 1rem;
     }
-    .accordion-content {
-      padding: 0.8rem 1rem;
+    .card {
+      width: 100%;
+      min-height: auto;
+      padding: 1.2rem 1rem;
+    }
+    .card img {
+      width: 100%;
+      max-width: 330px;
+      height: 300px;
+    }
+    nav a {
+      margin: 0 6px 8px 6px;
+      font-size: 0.92rem;
     }
   }
 </style>
@@ -142,119 +160,45 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="welcome.html">Welcome</a>
-    <a href="article_summaries.html" >Article Summaries</a>
+    <a href="article_summaries.html">Article Summaries</a>
     <a href="progress_reports.html">Progress Reports</a>
     <a href="experimental_design.html">Experimental Design</a>
-    <a href="Media.html" >Media </a>
+    <a href="Media.html">Media</a>
     <a href="Deliverables.html">Deliverables</a>
-    <a href="aboutus.html"class="active">About Us</a>
+    <a href="aboutus.html" class="active">About Us</a>
   </nav>
 </header>
-<main style="max-width: 1320px; margin: 2.8rem auto; background: #fff; border-radius: 16px; box-shadow: 0 8px 32px rgba(15,51,81,0.08); padding: 2.4rem 2.2rem 2rem 2.2rem;">
-  <h2 style="text-align:center; margin-bottom: 2.5rem;">Meet the Team</h2>
-  <div style="
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 2.5rem;
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-  ">
-    <!-- Member 1 Card -->
-    <div style="
-      background: #f4fafe;
-      border-radius: 18px;
-      box-shadow: 0 6px 24px rgba(34,41,107,0.14);
-      width: 380px;
-      min-height: 610px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1 1 380px;
-      max-width: 500px;
-    ">
-      <img src="updatedwebsitepicnikhil.jpg"
-        alt="Member 1 Photo"
-        style="width: 330px; height: 330px; object-fit:cover; border-radius:12px; box-shadow:0 4px 16px #d6d9df; margin-bottom:1.5rem;">
-      <h3 style="font-size:1.3rem; color:#224066; margin:1rem 0 0.7rem 0;">Nikhil Patil</h3>
-      <p style="font-size:1.13rem; color: #1a1a28; max-width:99%; margin:0 auto; text-align:left;">
-        “Governor’s School @ Innovation Park pushes us to think beyond the textbook. It’s where curiosity becomes real scientific exploration.”
-        <br>
-        <span style="display:block; height:20px;"></span>
-        “Every model you train doesn’t just predict earthquakes. It predicts the future you’re building through curiosity and computation.”
-      </p>
-      
+
+<main>
+  <h2>Meet the Team</h2>
+
+  <div class="group-statement">
+    Our team combines curiosity, creativity, and engineering to develop an early earthquake detection system that is both practical and innovative. Through collaboration, experimentation, and problem-solving, we turn ideas into working solutions that connect science with real-world impact.
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <img src="updatedwebsitepicnikhil.jpg" alt="Nikhil Patil photo" />
     </div>
-    <!-- Member 2 Card -->
-    <div style="
-      background: #f4fafe;
-      border-radius: 18px;
-      box-shadow: 0 6px 24px rgba(34,41,107,0.14);
-      width: 380px;
-      min-height: 610px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1 1 380px;
-      max-width: 500px;
-    ">
-      <img src="websitemahibpic.jpg"
-        alt="Member 2 Photo"
-        style="width: 330px; height: 330px; object-fit:cover; border-radius:12px; box-shadow:0 4px 16px #d6d9df; margin-bottom:1.5rem;">
-      <h3 style="font-size:1.3rem; color:#224066; margin:1rem 0 0.7rem 0;">Mahib Rahman</h3>
-      <p style="font-size:1.13rem; color: #1a1a28; max-width:99%; margin:0 auto; text-align:left;">
-        “Governor’s School @ Innovation Park gives us the space and support to turn ideas into working prototypes, making learning genuinely hands-on and meaningful.”
-        <br>
-        <span style="display:block; height:20px;"></span>
-        “Precision in every wire and circuit transforms ideas into impact; engineering is the science of making possibility tangible.”
-      </p>
-      
+
+    <div class="card">
+      <img src="websitemahibpic.jpg" alt="Mahib Rahman photo" />
     </div>
-    <!-- Member 3 Card -->
-    <div style="
-      background: #f4fafe;
-      border-radius: 18px;
-      box-shadow: 0 6px 24px rgba(34,41,107,0.14);
-      width: 380px;
-      min-height: 610px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1 1 380px;
-      max-width: 500px;
-    ">
-      <img src="updatedeliabpic.jpg"
-        alt="Member 3 Photo"
-        style="width: 330px; height: 330px; object-fit:cover; border-radius:12px; box-shadow:0 4px 16px #d6d9df; margin-bottom:1.5rem;">
-      <h3 style="font-size:1.3rem; color:#224066; margin:1rem 0 0.7rem 0;">Eliab Melaku</h3>
-      <p style="font-size:1.13rem; color: #1a1a28; max-width:99%; margin:0 auto; text-align:left;">
-        “At Governor’s School @ Innovation Park, we’re encouraged to build, test, and innovate in ways that truly prepare us for engineering in the real world.”
-        <br>
-        <span style="display:block; height:20px;"></span>
-        “Each component you assemble turns theory into reality; innovation begins the moment your hands meet the blueprint.”
-      </p>
+
+    <div class="card">
+      <img src="updatedeliabpic.jpg" alt="Eliab Melaku photo" />
     </div>
   </div>
+
+  <p><a class="back-link" href="index.html">← Back to Home</a></p>
 </main>
 
-<p><a href="index.html">← Back to Home</a></p>
+<footer>
+  © <span id="yr"></span> Early Earthquake Detection Research Team
+</footer>
+
 <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    function toggleAccordion(element) {
-      const item = element.parentElement;
-      item.classList.toggle('active');
-      document.querySelectorAll('.accordion-item').forEach(function(other) {
-        if (other !== item) other.classList.remove('active');
-      });
-    }
-  </script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
