@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deliverables – Early Earthquake Detection</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet" />
 <style>
@@ -19,7 +18,6 @@
     color: #fff;
     padding: 2rem 0 1.1rem 0;
     box-shadow: 0 4px 20px rgba(34, 41, 107, 0.12);
-    position: relative;
   }
 
   header h1 {
@@ -110,7 +108,7 @@
     border: none;
     outline: none;
     text-align: left;
-    transition: background 0.16s, transform 0.16s;
+    transition: background 0.16s;
     width: 100%;
     display: flex;
     align-items: center;
@@ -165,7 +163,6 @@
     border-radius: 10px;
     overflow: hidden;
     background: #fff;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4);
   }
 
   .pdf-frame {
@@ -191,6 +188,14 @@
 
   .download-link:hover {
     text-decoration: underline;
+  }
+
+  .fallback-box {
+    margin-top: 0.9rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e1e6ef;
+    border-radius: 10px;
+    background: #f8fbff;
   }
 
   .section-label {
@@ -267,7 +272,8 @@
 <main>
   <h2>Project Deliverables</h2>
   <p class="intro">
-    Click each section to open the file. Each deliverable is displayed right on this page for easy viewing and downloading.
+    Click each section to open the file. If a PDF does not display, use the link below it.
+    On GitHub Pages, the filename must match exactly, including capitalization and hyphens.
   </p>
 
   <div class="accordion">
@@ -315,9 +321,23 @@
       <div class="accordion-content">
         <p class="section-label">PowerPoint Poster</p>
         <p>This is the final symposium poster exported as a PDF.</p>
-        <div class="pdf-container">
+
+        <div class="fallback-box">
+          <p style="margin-top:0; margin-bottom:0.7rem;">
+            Poster file:
+            <a class="download-link" href="Symposium-poster-final.pdf" target="_blank" rel="noopener noreferrer">
+              Symposium-poster-final.pdf
+            </a>
+          </p>
+          <p style="margin:0 0 0.7rem 0; color:#607086;">
+            If the embedded preview does not work, open the poster directly using the link above.
+          </p>
+        </div>
+
+        <div class="pdf-container" style="margin-top:1rem;">
           <iframe class="pdf-frame" src="Symposium-poster-final.pdf" title="Symposium Poster PDF"></iframe>
         </div>
+
         <div class="file-note">
           If the PDF does not load, you can
           <a class="download-link" href="Symposium-poster-final.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
