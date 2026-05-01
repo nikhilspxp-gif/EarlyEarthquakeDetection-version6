@@ -143,20 +143,6 @@
     transform: rotate(90deg);
   }
 
-  .tag {
-    display: inline-block;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    background: #e8f2fb;
-    color: #24527a;
-    padding: 0.28rem 0.55rem;
-    border-radius: 999px;
-    margin-left: 0.55rem;
-    vertical-align: middle;
-  }
-
   .pdf-container {
     margin-top: 0.9rem;
     border: 1px solid #d0d6e0;
@@ -313,35 +299,38 @@
       </div>
     </div>
 
-<div class="accordion-item">
-  <button class="accordion-title" onclick="toggleAccordion(this)">
-    Symposium Poster
-    <span class="chevron">&#9654;</span>
-  </button>
-  <div class="accordion-content">
-    <p class="section-label">PowerPoint Poster</p>
-    <p>This is the final symposium poster exported as a PDF.</p>
+    <div class="accordion-item">
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        Symposium Poster
+        <span class="chevron">&#9654;</span>
+      </button>
+      <div class="accordion-content">
+        <p class="section-label">PowerPoint Poster</p>
+        <p>This is the final symposium poster exported as a PDF.</p>
 
-    <p style="margin-top:0.8rem;">
-      Direct file link:
-      <a class="download-link" href="Symposium-poster-final.pdf" target="_blank" rel="noopener noreferrer">
-        Open Symposium-poster-final.pdf
-      </a>
-    </p>
+        <div class="fallback-box">
+          <p style="margin-top:0; margin-bottom:0.7rem;">
+            Poster file:
+            <a class="download-link" href="Symposium-Poster_Final.pdf" target="_blank" rel="noopener noreferrer">
+              Open Symposium-Poster_Final.pdf
+            </a>
+          </p>
+          <p style="margin:0; color:#607086;">
+            If the embedded preview does not work, use the direct link above.
+          </p>
+        </div>
 
-    <div class="pdf-container" style="margin-top:1rem;">
-      <iframe
-        class="pdf-frame"
-        src="Symposium-poster-final.pdf"
-        title="Symposium Poster PDF"
-      ></iframe>
-    </div>
+        <div class="pdf-container" style="margin-top:1rem;">
+          <iframe class="pdf-frame" src="Symposium-Poster_Final.pdf" title="Symposium Poster PDF"></iframe>
+        </div>
 
-    <div class="file-note">
-      If the embedded preview does not load, use the direct link above.
+        <div class="file-note">
+          If the PDF does not load, you can
+          <a class="download-link" href="Symposium-Poster_Final.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
   <p><a class="back-link" href="index.html">← Back to Home</a></p>
 </main>
